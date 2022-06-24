@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/7a5c9047c5.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <title>Animation</title>
+</head>
+<body>
+    <div class="wrapper">
+        <main class="main">
+            <div class="container">
+                <div class="popup-content">
+                    <div class="header">
+                        <button id="dots" class="button"></button>
+                        <ul id="list" class="list-content">
+                            <li class="list-item">home</li>
+                            <li class="list-item">user</li>
+                            <li class="list-item">hellyeah</li>
+                            <li class="list-item">fuckoff</li>
+                        </ul>
+                    </div>
+                    <div class="block"></div>
+                </div>
+                <div class="tabs-wrapper">
+                    <nav class="tabs-nav">
+                        <button type="button" class="tab-btn activeTab" id="Cats"  onclick="setActive('Cats')">Cats</button>
+                        <button type="button" class="tab-btn" id="Dogs" onclick="setActive('Dogs')">Dogs</button>
+                        <button type="button" class="tab-btn" id="Devs" onclick="setActive('Devs')">devloper</button>
+                    </nav>
+                    <section class="tabs-content" id="tab">
+                        <div class="content">
+                            <div class="media">
+                                <img class="img" src="../img/img01.jpg" alt="cat-image">
+                            </div>
+                            <div class="media">
+                                <img class="img" src="../img/img01.jpg" alt="cat-image">
+                            </div>
+                            <div class="media">
+                                <img class="img" src="../img/img01.jpg" alt="cat-image">
+                            </div>
+                            <div class="media">
+                                <img class="img" src="../img/img01.jpg" alt="cat-image">
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="media">
+                                <img class="img" src="../img/img02.jpg" alt="dog-image">
+                            </div>
+                            <div class="media">
+                                <img class="img" src="../img/img02.jpg" alt="dog-image">
+                            </div>
+                            <div class="media">
+                                <img class="img" src="../img/img02.jpg" alt="dog-image">
+                            </div>
+                            <div class="media">
+                                <img class="img" src="../img/img02.jpg" alt="dog-image">
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="media">
+                                <img class="img" src="../img/img03.jpg" alt="dev-image">
+                            </div>
+                            <div class="media">
+                                <img class="img" src="../img/img03.jpg" alt="dev-image">
+                            </div>
+                            <div class="media">
+                                <img class="img" src="../img/img03.jpg" alt="dev-image">
+                            </div>
+                            <div class="media">
+                                <img class="img" src="../img/img03.jpg" alt="dev-image">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="lock-display">
+                    <div class="lock-header">
+                        <button id="Down" onclick="slideUpDown('Down')" class="lock-btn"><img src="./img/ico02.svg" style="width: 18px; height: 18px;" alt="dots"></button>
+                        <button class="lock-btn"><img src="./img/ico01.svg" style="width: 18px; height: 18px; transform: rotate(90deg);" alt="dots"></button>
+                    </div>
+                    <div id="scala" class="lock-content">
+                        <div class="placeholder-item">
+                            <div class="media-skeleton"></div>
+                            <div class="input-holder">
+                                <div class="input-skeleton"></div>
+                            </div>
+                        </div>
+                        <div class="placeholder-item">
+                            <div class="media-skeleton"></div>
+                            <div class="input-holder">
+                                <div class="input-skeleton"></div>
+                            </div>
+                        </div>
+                        <div class="placeholder-item">
+                            <div class="media-skeleton"></div>
+                            <div class="input-holder">
+                                <div class="input-skeleton"></div>
+                            </div>
+                        </div>
+                        <div class="placeholder-item">
+                            <div class="media-skeleton"></div>
+                            <div class="input-holder">
+                                <div class="input-skeleton"></div>
+                            </div>
+                        </div>
+                        <div class="placeholder-item">
+                            <div class="media-skeleton"></div>
+                            <div class="input-holder">
+                                <div class="input-skeleton"></div>
+                            </div>
+                        </div>
+                        <div class="placeholder-item">
+                            <div class="media-skeleton"></div>
+                            <div class="input-holder">
+                                <div class="input-skeleton"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="lock" class="slider-down">
+                        <h2 class="time">12:30</h2>
+                        <p style="margin-top: 0;">2/22/2022</p>
+                        <button id="Up" onclick="slideUpDown('Up')" class="up-btn"><img class="up-ico" src="img/ico02.svg" alt="up-btn"></button>
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="lock-header">
+                        <button class="lock-btn"><img src="./img/ico02.svg" style="width: 18px; height: 18px;" alt="dots"></button>
+                        <button class="lock-btn"><img src="./img/ico01.svg" style="width: 18px; height: 18px; transform: rotate(90deg);" alt="dots"></button>
+                    </div>
+                    <div class="card-block">
+                        <div id="productId" class="cart-content">
+                            <img src="img/img01.jpg" width="200px" alt="cat">
+                            <button id="product" onclick="cartMove('Product')" class="cart-btn"><img src="img/cart.svg" width="30px" height="30px" alt="cart"></button>
+                        </div>
+                        <div id="cartId" onclick="cartMove('Cart')" class="cart-box">
+                            <img src="img/cart.svg" width="30px" height="30px" alt="cart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
